@@ -1,2 +1,2 @@
-# docker-autobuild-bluemixcli
+# docker-bluemixcli
 Dockerfile for bluemixcli on ubuntu
