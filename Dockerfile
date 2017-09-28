@@ -9,8 +9,8 @@ RUN add-apt-repository \
    stable"
 RUN echo "deb http://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
 RUN apt-get update && apt-get install -y cf-cli docker-ce
-RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.3_amd64.tar.gz \
-    && tar -xvf Bluemix_CLI_0.5.3_amd64.tar.gz \
+RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.6_amd64.tar.gz \
+    && tar -xvf Bluemix_CLI_0.5.6_amd64.tar.gz \
     && cd Bluemix_CLI \
     && /bin/bash ./install_bluemix_cli
 RUN bx plugin install IBM-Containers -r Bluemix \
@@ -18,6 +18,6 @@ RUN bx plugin install IBM-Containers -r Bluemix \
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
     && chmod +x ./kubectl \
     && mv ./kubectl /usr/local/bin/kubectl
-RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/container-registry/container-registry-linux-amd64-0.1.136 \
-   && chmod +x container-registry-linux-amd64-0.1.136 \
-   && bluemix plugin install ./container-registry-linux-amd64-0.1.136
+RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/container-registry/container-registry-linux-amd64-0.1.328 \
+   && chmod +x container-registry-linux-amd64-0.1.328 \
+   && bluemix plugin install ./container-registry-linux-amd64-0.1.328
