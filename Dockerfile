@@ -18,6 +18,6 @@ RUN bx plugin install IBM-Containers -r Bluemix \
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
     && chmod +x ./kubectl \
     && mv ./kubectl /usr/local/bin/kubectl
-RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/container-registry/container-registry-linux-amd64-0.1.328 \
-   && chmod +x container-registry-linux-amd64-0.1.328 \
-   && bluemix plugin install ./container-registry-linux-amd64-0.1.328
+RUN wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/container-registry/container-registry-linux-amd64-0.1.215 \
+   && chmod +x container-registry-linux-amd64-0.1.215 \
+   && bluemix plugin install ./container-registry-linux-amd64-0.1.215
